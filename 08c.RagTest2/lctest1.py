@@ -6,11 +6,18 @@
 # 3. Updated 'from langchain.chains import LLMChain' to 'from langchain.chains import RunnableSequence' due
 # 3. Updated from 'model_kwargs={"temperature":1e-10}' to 'temperature=1e-10' due to depreciation
 import os
+from dotenv import load_dotenv # Not in tutorial: added to use gitignored .env file
 from langchain_core.prompts import PromptTemplate
 from langchain_huggingface import HuggingFaceEndpoint
 from langchain.chains import LLMChain
 
-#os.environ['HUGGINGFACEHUB_API_TOKEN'] = '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'
+
+# Not in tutorial: Sets path to .env file
+dotenv_path = os.path.join(os.path.dirname(__file__), '..', 'gitignored', '.env')
+load_dotenv(dotenv_path)
+
+HUGGINGFACEHUB_API_TOKEN = os.getenv('HUGGINGFACEHUB_API_TOKEN') 
+os.environ['HUGGINGFACEHUB_API_TOKEN'] = HUGGINGFACEHUB_API_TOKEN
 
 # initialize HuggingFace LLM
 flan_t5 = HuggingFaceEndpoint(
