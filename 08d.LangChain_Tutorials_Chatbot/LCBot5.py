@@ -25,6 +25,7 @@ LANGCHAIN_API_KEY = os.getenv('LANGCHAIN_API_KEY')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
 LANGCHAIN_PROJECT = os.getenv('LANGCHAIN_PROJECT')
 os.environ['LANGCHAIN_TRACING_V2'] ='true'
+
 os.environ['LANGCHAIN_ENDPOINT'] ='https://api.smith.langchain.com'
 os.environ['LANGCHAIN_PROJECT'] = LANGCHAIN_PROJECT
 os.environ['LANGCHAIN_API_KEY'] = LANGCHAIN_API_KEY 
