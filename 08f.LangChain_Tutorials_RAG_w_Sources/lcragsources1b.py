@@ -27,11 +27,11 @@ load_dotenv(dotenv_path)
 # Ensure that environment variables are set
 LANGCHAIN_API_KEY = os.getenv('LANGCHAIN_API_KEY')
 OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
-LANGCHAIN_PROJECT = os.getenv('LANGCHAIN_PROJECT')
+AICHAT_LANGCHAIN_PROJECT = os.getenv('AICHAT_LANGCHAIN_PROJECT')
 
 os.environ['LANGCHAIN_TRACING_V2'] ='true'
 os.environ['LANGCHAIN_ENDPOINT'] ='https://api.smith.langchain.com'
-os.environ['LANGCHAIN_PROJECT'] = LANGCHAIN_PROJECT
+os.environ['AICHAT_LANGCHAIN_PROJECT'] = AICHAT_LANGCHAIN_PROJECT
 os.environ['LANGCHAIN_API_KEY'] = LANGCHAIN_API_KEY 
 os.environ['OPENAI_API_KEY'] = OPENAI_API_KEY
 
